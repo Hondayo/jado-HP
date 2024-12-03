@@ -21,15 +21,7 @@ header img {
     height: 60vh;
     overflow: hidden;
 }
-.image-container p {
-    position: relative; /* 相対位置で配置 */
-    width: 50px; /* 画像の幅 */
-    height: auto; /* アスペクト比を保持 */
-    left: auto; /* 左への移動をリセット */
-    right: 0%; /* 親要素の右端に配置 */
-    float: right; /* 要素を右寄せ */
-    margin-left: 20px; /* 他の要素との間に余白を設定（任意） */
-}
+
 .image-container img {
     width: 100%;
     height: auto;
@@ -49,10 +41,19 @@ header img {
 }
 
 
-  .container {
-    width: 90%;
+  .container1 {
+    width: 70%;
     max-width: 1200px;
-    margin: 0 auto;
+    font-size: 1.5rem;
+    margin: 50px auto 0;
+  }
+  .container2 {
+    width: 60%;
+    max-width: 1200px;
+    font-size: 1.1rem;
+    justify-content: end;
+    align-items: end;
+    margin: 50px auto 0;
   }
   
   .logo {
@@ -119,13 +120,14 @@ header img {
 /* プロダクト画像 */
 .product-img-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   width: 100%;
 }
 
 .product-img-container img {
   max-width: 25%;
+  min-width: 150px;
 }
 
 /* サービス欄のコンテナ */
