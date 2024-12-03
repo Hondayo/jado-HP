@@ -1,120 +1,131 @@
 /* 基本スタイル */
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-header {
-    margin: 20px 0;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
+
+header {
+  margin: 20px 0;
+}
+
 header img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
+}
+
+main {
+  width: 100%;
 }
 
 .image-container {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    animation: zoomEffect 10s infinite alternate;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: zoomEffect 10s infinite alternate;
 }
+
 @keyframes zoomEffect {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1.2);
-    }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
 }
 
 
-  .container1 {
-    width: 70%;
-    max-width: 1200px;
-    font-size: 1.5rem;
-    margin: 50px auto 0;
-  }
-  .container2 {
-    width: 60%;
-    max-width: 1200px;
-    font-size: 1.1rem;
-    justify-content: end;
-    align-items: end;
-    margin: 50px auto 0;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-  }
-  
-  .nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  #hero {
-    background: linear-gradient(to bottom, #ffffff, #ffffff);
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    border: 2px solid #000000;
-    margin-top: 1rem;
-    background: #ffffff00;
-    color: #000000;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-  }
- 
+.container1 {
+  width: 70%;
+  max-width: 1200px;
+  font-size: 1.5rem;
+  margin: 50px auto 0;
+}
 
-  .cta-mozi {
-    display: inline-block;
-    margin-top: 1rem;
-    background: #ffffff00;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  .cta-button:hover {
-    background: #f0f0f0; /* ホバー時に薄いグレーに変更 */
-    color: #000000; /* ホバー時も文字色を黒のまま */
-  }
+.container2 {
+  width: 60%;
+  max-width: 1200px;
+  font-size: 1.1rem;
+  justify-content: end;
+  align-items: end;
+  margin: 50px auto 0;
+}
 
-  section {
-    padding: 2rem 1rem;
-  }
-  
-  footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-  }
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+#hero {
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  border: 2px solid #000000;
+  margin-top: 1rem;
+  background: #ffffff00;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+.cta-mozi {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #ffffff00;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  background: #f0f0f0;
+  /* ホバー時に薄いグレーに変更 */
+  color: #000000;
+  /* ホバー時も文字色を黒のまま */
+}
+
+section {
+  padding: 2rem 1rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
 
 
 /* プロダクト画像 */
@@ -122,15 +133,18 @@ header img {
   display: flex;
   justify-content: start;
   align-items: start;
-  width: 100%;
 }
 
 .product-img-container img {
-  max-width: 25%;
+  width: 50px;
   min-width: 150px;
 }
 
-/* サービス欄のコンテナ */
+/* サービス */
 .services-container {
   display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  margin: 0px 2rem;
+  max-width: 80%;
 }
