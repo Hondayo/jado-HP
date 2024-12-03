@@ -15,7 +15,6 @@ header img {
     height: auto;
 }
 
-
 .image-container {
     position: relative;
     width: 100%;
@@ -115,4 +114,21 @@ header img {
     text-align: center;
     padding: 1rem 0;
   }
-  
+
+
+/* プロダクト画像 */
+.product-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.product-img-container img {
+  max-width: 25%;
+}
+
+/* サービス欄のコンテナ */
+.services-container {
+  display: flex;
+}
