@@ -1,0 +1,278 @@
+/* ===============================
+   基本スタイル
+================================ */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===============================
+   ヘッダー
+================================ */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.logo-container img {
+    width: 200px;
+    height: auto;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ===============================
+   ヒーローセクション
+================================ */
+/* ヒーローセクション */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: brightness(60%);
+    transform: translate(-50%, -50%) scale(1);
+    animation: slideUp 5s forwards; /* アニメーションを追加 */
+}
+
+/* アニメーションの定義 */
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, -40%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -60%) scale(1); 
+    }
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2rem; /* 初期フォントサイズ */
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh; /* 高さを少し縮小 */
+    }
+
+    .hero-text {
+        font-size: 1rem; /* フォントサイズを縮小 */
+        padding: 15px; /* 内側の余白を調整 */
+        line-height: 1.4; /* 行間を調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 60vh; /* 高さをさらに縮小 */
+    }
+
+    .hero-text {
+        font-size: 1rem; /* フォントサイズをさらに縮小 */
+        padding: 10px; /* 内側の余白をさらに調整 */
+        line-height: 1.3; /* 行間を調整 */
+    }
+}
+
+/* セクション */
+.container {
+    margin: 4rem auto;
+    max-width: 1000px; /* 幅を広げる */
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* 洗練されたグラデーション背景 */
+    border-radius: 16px; /* 角をさらに丸める */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 深みのある影を追加 */
+    border: none; /* 境界線を削除してミニマルに */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* 滑らかなホバーエフェクト */
+}
+
+.container:hover {
+    transform: translateY(-12px) scale(1.02); /* ホバー時にわずかに拡大 */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25); /* 影を強調してダイナミックな印象に */
+}
+
+.container h1 {
+    font-size: 2.8rem; /* ヘッダーをさらに目立たせる */
+    margin-bottom: 2rem;
+    color: #002c5f; /* 深いネイビーブルー */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* 文字間隔をさらに広げる */
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* 軽い文字の影を追加 */
+}
+
+.container h2 {
+    font-size: 1.5rem; /* テキストを大きく */
+    line-height: 1.9;
+    color: #333; /* より濃いグレーで鮮明に */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* バリューセクション */
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 幅を広げてバランスを調整 */
+    gap: 2rem; /* カード間の間隔を広げる */
+    margin-top: 3rem;
+}
+
+.values article {
+    background: linear-gradient(145deg, #ffffff, #e9e9e9); /* グラデーション背景を微調整 */
+    padding: 2rem;
+    border-radius: 16px; /* 角をさらに丸める */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 深い影を追加 */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative; /* エフェクト用の基準を設定 */
+    overflow: hidden; /* 不要な部分を隠す */
+}
+
+.values article::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+    transform: rotate(-45deg);
+    transition: transform 0.8s ease;
+    z-index: 0;
+}
+
+.values article:hover::before {
+    transform: rotate(0deg) scale(1.2); /* ホバー時にダイナミックな光のエフェクト */
+}
+
+.values article:hover {
+    transform: translateY(-10px) scale(1.03); /* ホバー時に拡大 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.values h2 {
+    font-size: 1.8rem; /* 見出しをさらに目立たせる */
+    margin-bottom: 1rem;
+    color: #002c5f; /* 深いブルー */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* 文字間隔を広げる */
+    z-index: 1; /* テキストを前面に */
+    position: relative;
+}
+
+.values p {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #555;
+    text-align: center;
+    margin-top: 1rem;
+    z-index: 1; /* テキストを前面に */
+    position: relative;
+}
+
+
+/* 会社概要 */
+.company-overview {
+    margin: 4rem auto; /* 上下の余白をさらに拡大 */
+    max-width: 1000px; /* 最大幅を広げる */
+    padding: 2rem; /* 内側の余白を広げる */
+    background-color: #ffffff; /* 背景を白に */
+
+}
+
+.company-overview table {
+    width: 100%;
+    border-collapse: collapse; /* テーブルの境界を重ねる */
+}
+
+.company-overview th,
+.company-overview td {
+    text-align: left; /* テキストを左揃え */
+    padding: 1.5rem; /* セル内の上下余白をさらに拡大 */
+    border-bottom: 2px solid #b1b1b1; 
+    font-size: 1.2rem; /* フォントサイズを拡大 */
+}
+
+.company-overview th {
+    background-color: #ffffff; 
+    color: #b1b1b1; 
+    font-weight: bold;
+    padding: 2rem; /* ヘッダーセルの余白をさらに広げる */
+}
+
+.company-overview td {
+    color: #000; /* データ文字を黒に */
+    font-size: 1.2rem; /* フォントサイズを調整 */
+    padding-top: 1.5rem; /* 上部の余白を広げる */
+    padding-bottom: 1.5rem; /* 下部の余白を広げる */
+}
+
+
+/* ===============================
+   フッター
+================================ */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
