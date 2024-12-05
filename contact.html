@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせフォーム</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+     <!-- ヘッダー -->
+  <header class="header-container">
+    <div class="logo-container">
+        <a href="http://jadohonda.netlify.app/index.html">
+            <img src="images/logo.jpg" alt="JADO株式会社のロゴ">
+          </a>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="https://jadohonda.netlify.app/about.html">About</a></li>
+        <li><a href="https://jadohonda.netlify.app/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+     <!-- お問い合わせ -->
+ <div class="contact-form-container">
+    <h1>お問い合わせ</h1>
+    <p>お気軽にお問い合わせください。以下のフォームに必要事項をご記入の上、送信してください。</p>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" placeholder="お名前を入力してください" required>
+        </div>
+        <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required>
+        </div>
+        <div class="form-group">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" name="message" placeholder="お問い合わせ内容を入力してください" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">送信</button>
+    </form>
+ </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://jadohonda.netlify.app/terms.html" class="link-secondary">利用者情報の外部送信について</a>
+      <a href="https://jadohonda.netlify.app/privacy-policy.html" class="link-secondary">プライバシーポリシー</a>
+    </div>
+    <p>&copy; 2024 JADO Inc.</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

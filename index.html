@@ -1,94 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JADO株式会社</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            text-align: center;
-        }
-
-        header {
-            margin: 20px 0;
-        }
-
-        header img {
-            width: 200px;
-            height: auto;
-        }
-
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(1);
-            animation: zoomEffect 10s infinite alternate;
-        }
-
-        @keyframes zoomEffect {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-        }
-
-        nav {
-            margin: 30px 0;
-        }
-
-        nav a {
-            display: inline-block;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #333333;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-
-        nav a:hover {
-            border-color: #007BFF;
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 14px;
-            color: #888888;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JADO | Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="JADO株式会社のロゴ">
-        
-    </header>
-    <div class="image-container">
-        <img src="homepage.jpg" alt="背景画像">
+  <!-- ヘッダー -->
+  <header class="header-container">
+    <div class="logo-container">
+        <a href="http://jadohonda.netlify.app/index.html">
+            <img src="images/logo.jpg" alt="JADO株式会社のロゴ">
+          </a>
     </div>
-    <h1>JADO株式会社</h1>
     <nav>
-        <a href="https://jadohonda.netlify.app/home.html">ホーム</a>
-        <a href="https://jadohonda.netlify.app/terms.html">利用規約</a>
-        <a href="https://jadohonda.netlify.app/privacy-policy.html">プライバシーポリシー</a>
+      <ul class="nav-menu">
+        <li><a href="https://jadohonda.netlify.app/about.html">About</a></li>
+        <li><a href="https://jadohonda.netlify.app/contact.html">Contact</a></li>
+      </ul>
     </nav>
-    <footer>
-        <p>&copy; 2024 JADO株式会社. All rights reserved.</p>
-    </footer>
+  </header>
+
+  <!-- メイン画像と紹介テキスト -->
+  <div class="hero-section">
+    <img src="images/homepage.jpg" alt="背景画像">
+    <div class="hero-text">
+      <h1>Who We Are</h1>
+      <p>
+        私たちは人々の課題を解決し、生活をより豊かにします。
+      </p>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <section class="services-section">
+      <!-- サービス紹介 -->
+      <article class="service-card">
+        <p>Our Services</p>
+        <h2>養育費を可視化するSaaS</h2>
+        <p>
+          養育費で揉めないために可視化するWebサービスです。
+          何年も向き合っていく養育費の取り決め、金額の変動を
+          直接コミュニケーションをとることなくお子さんが
+          成人するまでサポートいたします。
+        </p>
+        <br>
+        <a href="https://visualcs-qmmcsorxg-honda-ryos-projects.vercel.app/" class="btn-primary" target="_blank">サービスサイトへ</a>
+        
+      </article>
+
+      <!-- プロダクト画像 -->
+      <div class="product-gallery">
+        <img src="images/image 31.png" alt="プロダクト概要 1">
+        <img src="images/image 42.png" alt="プロダクト概要 2">
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://jadohonda.netlify.app/terms.html" class="link-secondary">利用者情報の外部送信について</a>
+      <a href="https://jadohonda.netlify.app/privacy-policy.html" class="link-secondary">プライバシーポリシー</a>
+    </div>
+    <p>&copy; 2024 JADO Inc.</p>
+  </footer>
 </body>
 </html>

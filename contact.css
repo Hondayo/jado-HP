@@ -1,0 +1,169 @@
+/* 全体スタイル */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+
+}
+header {
+    margin: 20px 0;
+}
+
+.logo-container img {
+    width: 200px;
+    height: auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+}
+/* ===============================
+   お問い合わせフォーム
+================================ */
+.contact-form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+.contact-form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form-container p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* フォームのスタイル */
+form {
+    margin-top: 1rem;
+}
+
+form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #444;
+    font-size: 1rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    background-color: #ffffff;
+}
+
+/* 送信ボタン */
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+/* ===============================
+   フッター
+================================ */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* ===============================
+   レスポンシブ対応
+================================ */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+    }
+}
